@@ -9,14 +9,59 @@
 </head>
 
 <body>
-
-
-
-    <h1>where ya Pirate at?</h1>
+    <header role="header">
+        <h1>Pick Yer Poison</h1>
+    </header>
+    <main role="main">
+        <form>
+            <div class="formGroup">
+                <label for="isDrinkStrong">D'ya like ya drink strong?</label>
+                <select name="isDrinkStrong" class="isDrinkStrong">
+                    <option value="yes">Aye</option>
+                    <option value="no">Nay</option>
+                </select>
+            </div>
+            <div class="formGroup">
+                <label for="isDrinkSalty">Do ye like it with a salty tang?</label>
+                <select name="isDrinkSalty" class="isDrinkSalty">
+                    <option value="yes">Aye</option>
+                    <option value="no">Nay</option>
+                </select>
+            </div>
+            <div class="formGroup">
+                <label for="isDrinkBitter">Are ye a lubber who likes it bitter?</label>
+                <select name="isDrinkBitter" class="isDrinkBitter">
+                    <option value="yes">Aye</option>
+                    <option value="no">Nay</option>
+                </select>
+            </div>
+            <div class="formGroup">
+                <label for="isDrinkSweet">Would ye like a bit of sweetness with yer poison?</label>
+                <select name="isDrinkSweet" class="isDrinkSweet">
+                    <option value="yes">Aye</option>
+                    <option value="no">Nay</option>
+                </select>
+            </div>
+            <div class="formGroup">
+                <label for="isDrinkFruity">Are ye one for a fruity finish?</label>
+                <select name="isDrinkFruity" class="isDrinkFruity">
+                    <option value="yes">Aye</option>
+                    <option value="no">Nay</option>
+                </select>
+            </div>
+            <div class="formGroup button">
+                <button class="orderBtn">Place yer Arrder</button>
+            </div>
+        </form>
+    </main>
+    <section class="output">
+        <h3></h3>
+        <ul></ul>
+    </section>
 
 
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-    <source src="js/app.js">
+    <source type="text/javascript" src="js/app.js">
 </body>
 
 </html>
