@@ -1,13 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    /*The box-sizing property is used to tell the browser what the sizing properties (width and height) should include border-box.*/
+    box-sizing: border-box;
+    /*reset Chrome user agent styles*/
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-before: 0px;
+    -webkit-padding-after: 0px;
+    -webkit-padding-start: 0px;
+    -webkit-padding-end: 0px;
+}
+
 html {
     background-color: #fff;
     background: url("../images/pirate_background_image.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;}
-#backgroundImage {
-
+    background-size: cover;
+    min-height: 100%;
+    color: #fff;
 }
+
+header {
+    text-align: center;
+    font-size: 5em;
+    padding-top: 55px;
+    color: #fff;
+    line-height: 1.4em;
+    font-weight: 300;
+}
+
+body {
+    background-image: url("http://mariusbanea.github.io/thinkful-pirate-bartender/images/transparent.jpg");
+    min-height: 1500px;
+    width: 100%;
+}
+
+form {
+    height: 600px;
+    width: 729px;
+    margin: 0 auto;
+}
+
+.formGroup {
+    padding-top: 30px;
+    font-size: 2em;
+}
+
 
 /* desktop first approach = (the website was built initialy for desktop and will be adapted for mobiles)
 Even if this approach requires more work in the long run, it is used often in order to develop and Minimum Voable Product with the least amount of initial investment
