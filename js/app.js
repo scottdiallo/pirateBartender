@@ -28,40 +28,39 @@ var Drink = function (pantry, drinkOrder) { //constructor function
     return ingredientsArray;
 };
 
-var
-    $(document).ready(function () {
-        //    console.log('Hello World!');
-        $('output').hide();
 
-        $('form').on('submit', function (event) {
-            event.preventDefault();
-            // setting the empty values array
-            orerValues = []; //user choice from DOM will be push to this array
 
-            //making sure each of the ingredient have been chosen
-            $('select').each(function () {
-                orderValues.push($(this).val() === 'yes' ? true : false);
-            });
+$(function () {
+    console.log('Hello World!');
+    $('.output').hide();
+    $('form').on('submit', function (event) {
+        event.preventDefault();
+        // setting the empty values array
+        orderValues = []; //user choice from DOM will be push to this array
 
-            // using our two constructors to create 2 new objects
-            drinkOrder = new Order(orderValues); //create new order from user preferences
-            concotion = new Drink(pantry, drinkOrder); //randomly select value within pantry
-
-            //build the user choice from from our ingreding array
-            var buildTheHtmlOutput = "";
-            $.each(concotion, function (key, value) {
-                buildTheHtmlOutput += "<li>" + value + "</li>";
-            });
-
-            display the output container
-            $('.output').show();
-
-            //populate it with the ingredients
-            $('.output ul').html(buildTheHtmlOutput);
-
-            //name the customer drink with drinkName
-            $('output h3').html("Here be " + drinkNamer(concoction) + ", ye scurvy dog!");
-
+        //making sure each of the ingredient have been chosen
+        $('select').each(function () {
+            orderValues.push($(this).val() === 'yes' ? true : false);
         });
 
+        // using our two constructors to create 2 new objects
+        drinkOrder = new Order(orderValues); //create new order from user preferences
+        concotion = new Drink(pantry, drinkOrder); //randomly select value within pantry
+
+        //build the user choice from from our ingreding array
+        var buildTheHtmlOutput = "";
+        $.each(concotion, function (key, value) {
+            buildTheHtmlOutput += "<li>" + value + "</li>";
+        });
+
+        //display the output container
+        $('.output').show();
+
+        //populate it with the ingredients
+        $('.output ul').html(buildTheHtmlOutput);
+
+        //name the customer drink with drinkName
+        $('output h3').html("Here be " + drinkNamer(concoction) + ", ye scurvy dog!");
+
     });
+});
