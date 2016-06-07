@@ -66,13 +66,13 @@ form {
     background-color: cyan;
     color: white;
     border-radius: 7px;
-    padding: 20px 10px;
+    padding: 5px;
     text-align: center;
     margin-left: 30%;
     cursor: pointer;
     outline: none;
     margin-top: 15px;
-    font-size: 2em;
+    font-size: 1em;
 }
 
 .isDrinkStrong,
@@ -88,8 +88,16 @@ form {
 }
 
 .output {
-    height: 400px;
-    width: 200px
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 1.4;
+    color: wheat;
+    margin-top: -92px;
+}
+
+.output h3 {
+    font-size: 1.4em;
+    color: #fff;
 }
 
 
