@@ -30,13 +30,20 @@ html {
 
 /* *************/
 
-header {
+header,
+.subheader {
     text-align: center;
-    font-size: 5em;
-    padding-top: 55px;
     color: #fff;
-    line-height: 1.4em;
     font-weight: 300;
+}
+
+header {
+    font-size: 5em;
+    line-height: 1.4em;
+}
+
+.subheader {
+    font-size: .8em;
 }
 
 body {
@@ -59,12 +66,13 @@ form {
 .orderBtn {
     background-color: cyan;
     color: white;
-    border-radius: 10px;
+    border-radius: 7px;
     padding: 5px;
     text-align: center;
-    margin: 0 auto;
     margin-left: 30%;
     cursor: pointer;
+    outline: none;
+    margin-top: 10px;
 }
 
 .isDrinkStrong,
@@ -73,7 +81,10 @@ form {
 .isDrinkSweet,
 .isDrinkFruity {
     float: right;
-    cursor: pointer
+    cursor: pointer;
+    background-color: gray;
+    color: white;
+    outline: none;
 }
 
 
