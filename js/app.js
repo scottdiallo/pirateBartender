@@ -57,7 +57,7 @@ var
             $('.output').show();
 
             //populate it with the ingredients
-            $('output ul').html(buildTheHtmlOutput);
+            $('.output ul').html(buildTheHtmlOutput);
 
             //name the customer drink with drinkName
             $('output h3').html("Here be " + drinkNamer(concoction) + ", ye scurvy dog!");

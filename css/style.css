@@ -66,12 +66,13 @@ form {
     background-color: cyan;
     color: white;
     border-radius: 7px;
-    padding: 5px;
+    padding: 20px 10px;
     text-align: center;
     margin-left: 30%;
     cursor: pointer;
     outline: none;
-    margin-top: 10px;
+    margin-top: 15px;
+    font-size: 2em;
 }
 
 .isDrinkStrong,
@@ -84,6 +85,11 @@ form {
     background-color: gray;
     color: white;
     outline: none;
+}
+
+.output {
+    height: 400px;
+    width: 200px
 }
 
 
