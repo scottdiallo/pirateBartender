@@ -47,8 +47,8 @@ header {
 }
 
 body {
-    background-image: url(/images/transparent.jpg);
     width: 100%;
+    background-image: url(../images/transparent.jpg);
 }
 
 form {
