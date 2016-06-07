@@ -56,6 +56,26 @@ form {
     font-size: 2em;
 }
 
+.orderBtn {
+    background-color: cyan;
+    color: white;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+    margin: 0 auto;
+    margin-left: 30%;
+    cursor: pointer;
+}
+
+.isDrinkStrong,
+.isDrinkSalty,
+.isDrinkBitter,
+.isDrinkSweet,
+.isDrinkFruity {
+    float: right;
+    cursor: pointer
+}
+
 
 /* desktop first approach = (the website was built initialy for desktop and will be adapted for mobiles)
 Even if this approach requires more work in the long run, it is used often in order to develop and Minimum Voable Product with the least amount of initial investment
