@@ -54,7 +54,6 @@ $(document).ready(function () {
 
     $('.output').hide();
 
-
     $('form').on('submit', function (event) {
 
         event.preventDefault(); //using javascript to submit form when page is reload
@@ -83,6 +82,13 @@ $(document).ready(function () {
 
         // naming the customer drink
         $(".output h3").html("Here be " + drinkNamer(concoction) + ", ye scurvy dog!");
+        $('main').hide();
+        $('.subheader').hide();
+
+    });
+    $('.tryAgain').on('click', function () {
+        $('.output').hide();
+        $('main').show();
     });
 
     //create a nice box to display drink ordered.
