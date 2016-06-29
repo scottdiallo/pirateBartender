@@ -44,11 +44,17 @@ var generateRandomNumber = function (min, max) {
 }
 
 //creating drink namer variable
-
 var drinkNamer = function (concoction) {
-    var drinkNamerOutput = concoction[0].split(" ");
-    return "yer Sparkly " + toTitleCase(drinkNamerOutput[drinkNamerOutput.length - 1]) + " Grog";
+    if (concoction.length > 0) {
+        //split the concoction by space to be able to use the words
+        var drinkNamerOutput = concoction[0].split(" ");
+        //build the name of the new drink by getting the second word of the first ingredient and add extra words around it
+        return "yer Sparkly " + toTitleCase(drinkNamerOutput[drinkNamerOutput.length - 1]) + " Grog";
+    } else {
+        return false;
+    }
 };
+
 
 $(document).ready(function () {
 
@@ -74,7 +80,7 @@ $(document).ready(function () {
         $.each(concoction, function (key, value) {
             buildTheHtmlOutput += "<li>" + value + "</li>";
         });
-
+        //        console.log(concoction);
         //display the output container
         $('.output').show();
 
