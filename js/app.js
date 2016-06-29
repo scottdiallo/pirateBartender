@@ -84,4 +84,6 @@ $(document).ready(function () {
         // naming the customer drink
         $(".output h3").html("Here be " + drinkNamer(concoction) + ", ye scurvy dog!");
     });
+
+    //create a nice box to display drink ordered.
 });
