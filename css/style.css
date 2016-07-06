@@ -32,6 +32,22 @@ main {
     padding: 0px;
 }
 
+.greeting {
+    text-align: center;
+}
+
+#intro {
+    font-size: 2em;
+    color: aquamarine;
+    font-weight: 600;
+}
+
+#introSection {
+    text-align: center;
+    font-size: 2.5em;
+    color: chartreuse;
+}
+
 
 /* *************/
 
@@ -54,7 +70,7 @@ header {
 body {
     width: 100%;
     background-image: url(../images/transparent.jpg);
-    padding-bottom: 400px;
+    padding-bottom: 800px;
 }
 
 form {
@@ -73,7 +89,8 @@ form {
 }
 
 .orderBtn,
-.tryAgain {
+.tryAgain,
+.questionButton {
     background-color: cyan;
     color: white;
     border-radius: 7px;
@@ -83,6 +100,10 @@ form {
     outline: none;
     margin-top: 15px;
     font-size: 1em;
+}
+
+.questionButton {
+    padding: 15px;
 }
 
 .isDrinkStrong,

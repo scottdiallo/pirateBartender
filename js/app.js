@@ -1,4 +1,9 @@
-var pantry = {
+//Global variables declarations
+//asking customer name first bfre making drink
+var customerName = prompt('Wah Gwaan Pirate, what ya name?');
+var intro = 'Hi ' + customerName + ' !' + ' lets get drunk';
+
+var pantry = { //pantry with items to choose from
     strong: ["glug of rum", "slug of whisky", "splash of gin"],
     salty: ["olive on a stick", "salt-dusted rim", "rasher of bacon"],
     bitter: ["shake of bitters", "splash of tonic", "twist of lemon peel"],
@@ -15,6 +20,7 @@ var Order = function (orderValues) {
     this.fruity = orderValues[4];
 };
 
+// populating the drink
 var Drink = function (pantry, drinkOrder) {
     var ingredientNumber,
         ingredientsArray = [];
@@ -34,7 +40,7 @@ var toTitleCase = function (str) {
     });
 }
 
-//Math.random function
+//Math.random function to pick from the pantry
 
 var generateRandomNumber = function (min, max) {
 
@@ -57,8 +63,23 @@ var drinkNamer = function (concoction) {
 
 
 $(document).ready(function () {
-
+    $('.subheader').hide();
     $('.output').hide();
+    $('main').hide();
+    $('.subheader').hide();
+
+
+    //    //asking customer name first bfre making drink
+    //    var customerName = prompt('Wah Gwaan Pirate, what ya name?');
+    //    var intro = 'Welcome ' + customerName + ',' + " " + '  CLICK THA BUTTON TO PICK YA POISON';
+
+    $('#intro').append(intro);
+
+    //display question once button is clicked
+    $('.questionButton').on('click', function () {
+        $('main').show();
+        $('.questionButton').hide();
+    })
 
     $('form').on('submit', function (event) {
 
@@ -89,12 +110,16 @@ $(document).ready(function () {
         // naming the customer drink
         $(".output h3").html("Here be " + drinkNamer(concoction) + ", ye scurvy dog!");
         $('main').hide();
-        $('.subheader').hide();
 
     });
     $('.tryAgain').on('click', function () {
         $('.output').hide();
         $('main').show();
+        $('#intro').hide();
+        $('.subheader').show();
+
+        customerName;
+        intro;
     });
 
     //create a nice box to display drink ordered.
