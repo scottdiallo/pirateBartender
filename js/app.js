@@ -1,8 +1,6 @@
 //Global variables declarations
-//asking customer name first bfre making drink
-var customerName = prompt('Wah Gwaan Pirate, what ya name?');
-var intro = 'Hi ' + customerName + ' !' + ' lets get drunk';
-
+var userName = "";
+var intro = "";
 var pantry = { //pantry with items to choose from
     strong: ["glug of rum", "slug of whisky", "splash of gin"],
     salty: ["olive on a stick", "salt-dusted rim", "rasher of bacon"],
@@ -63,15 +61,11 @@ var drinkNamer = function (concoction) {
 
 
 $(document).ready(function () {
+
     $('.subheader').hide();
     $('.output').hide();
     $('main').hide();
     $('.subheader').hide();
-
-
-    //    //asking customer name first bfre making drink
-    //    var customerName = prompt('Wah Gwaan Pirate, what ya name?');
-    //    var intro = 'Welcome ' + customerName + ',' + " " + '  CLICK THA BUTTON TO PICK YA POISON';
 
     $('#intro').append(intro);
 
@@ -113,14 +107,23 @@ $(document).ready(function () {
 
     });
     $('.tryAgain').on('click', function () {
-        $('.output').hide();
-        $('main').show();
-        $('#intro').hide();
+        window.location.reload();
+
+    });
+
+    $('.questionButton').on('click', function () {
+        $('.askName').hide();
+        $('.customerName').hide();
+        userName = $('input').val();
+        intro = "Hi " + userName + " !" + " Pick Yer Poison";
+        $('#intro').html(intro);
         $('.subheader').show();
 
-        customerName;
-        intro;
     });
+
+    $('.orderBtn').on('click', function () {
+        $('#intro').html("Hi " + userName + " !" + " Enjoy your Drink");
+    })
 
     //create a nice box to display drink ordered.
 });

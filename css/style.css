@@ -34,6 +34,7 @@ main {
 
 .greeting {
     text-align: center;
+    margin-top: 160px;
 }
 
 #intro {
@@ -71,6 +72,18 @@ body {
     width: 100%;
     background-image: url(../images/transparent.jpg);
     padding-bottom: 800px;
+}
+
+.askName {
+    font-size: 2em;
+    color: aqua;
+    padding-bottom: 20px;
+}
+
+.customerName {
+    height: 30px;
+    width: 250px;
+    margin-bottom: 15px;
 }
 
 form {
