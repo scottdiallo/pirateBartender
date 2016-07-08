@@ -39,7 +39,7 @@ main {
 
 #intro {
     font-size: 2em;
-    color: aquamarine;
+    color: aqua;
     font-weight: 600;
 }
 
@@ -104,7 +104,7 @@ form {
 .orderBtn,
 .tryAgain,
 .questionButton {
-    background-color: cyan;
+    background-color: aqua;
     color: white;
     border-radius: 7px;
     padding: 5px;

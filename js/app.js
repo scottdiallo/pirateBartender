@@ -111,18 +111,23 @@ $(document).ready(function () {
 
     });
 
+    //prevent user from ordering without a name
     $('.questionButton').on('click', function () {
+        if ($("input" == "")) {
+            alert("Don't you have a name pirate?");
+
+        };
         $('.askName').hide();
         $('.customerName').hide();
         userName = $('input').val();
-        intro = "Hi " + userName + " !" + " Pick Yer Poison";
+        intro = "Hi " + userName + "!" + " Pick Yer Poison";
         $('#intro').html(intro);
         $('.subheader').show();
 
     });
 
     $('.orderBtn').on('click', function () {
-        $('#intro').html("Hi " + userName + " !" + " Enjoy your Drink");
+        $('#intro').html("Hi " + userName + "!" + " Enjoy your Drink");
     })
 
     //create a nice box to display drink ordered.
